@@ -1,0 +1,58 @@
+NORDER
+
+    Keep Doing
+        Agile Coach
+        Physical Timer
+        Timothy - the rubber duck, king of Cardinal
+        Splitters
+        Free Earbuds
+        Sprint Cycles
+            5min - Stand Up
+            25min - Do the work
+            10min - Show-n-Tell
+            10min - Retro
+            10min - Break
+        3 Sprint Cycles in the Morning
+        3 Sprint Cycles in the Afternoon
+        Final Retro
+        Engaging Retros
+        Non-Cardinal imaged laptops
+        Guest Network (somewhat instable early)
+        Presentation Medley
+        Separate Tabs for each student for presentation
+        Save file in each computer
+
+    Start Doing
+        Give a live coding demo Friday Night
+        Give better code for sync of music
+        Stress the importance of exactness in code
+        Explain .gain() better.  Lots of questions about volume
+            AKA MORE COWBELL
+        Name Signs in front of their Computers
+            Let them decorate
+        Extra coach's laptop to help with file sharing via thumb drive
+
+    Stop Doing
+        Voice recordings - They hated it
+        Replace with .mousex() and .mousey()
+
+    Watch Out
+        Guest networking cutting out
+
+BRETT
+    Improve
+        Name tags: have the kids write their names in big sharpie letters - would really help especially as the kids move around the room and collaborate.
+        Stand-up: have the kids actually stand-up and gather in the front of the class instead of sitting in front of their monitors
+        More direct explanation of basic syntax early on - emphasizing importance of spaces, closing brackets, what goes first, what goes last, etc
+        During retro - presenter should ask more questions of the kids ("what did you mean by this?" "who else felt this way?") so there's more discussion among the kids
+        Maybe make an FAQ handout (Q: "How do I speed up a piece", "How do I add another cycle to my piece?") to be handed out during the afternoon session, in case any kids are still struggling with earlier concepts and need it spelled out more plainly.
+        Idea for the 10 minute Show and Tell: as the group gets more experience during the day we could experiment with having a few individual kids volunteer to present their screen and have them talk through what they were trying to do, what they ended up doing, and any problems they had to overcome along with how they did it.  
+
+    Keep
+        The built-in breaks coupled with activities in the room (jenga blocks, ping-pong was a hit)
+        Making the last retros of the morning and afternoon sessions more over-arching. Save Grammy's for the end - definitely would like to see the kids talking about each other's work and showing off their own stuff (but without anyone feeling left out or ignored)
+
+CAROLYN
+    I loved the structure of the sprints and getting the 25 min to play around. I heard from a few of them that the sounds morphed into something confusing so i wonder if they should learn the new code for like 5-10 min and then add it to their overall piece?
+    I liked the Grammy awards and the idea of giving feedback. It felt a little awkward as each girl played her music so maybe we chose a student or two each section that the girls gave feedback on for their sound. Nothing formal but just something to get the room talking. And then at the end, we could do grammys like loudest song, weirdest song, deepest song (idk funny things to make the girls laugh and be proud of the crazy music they made)
+    I feel like Beats is a bit easier to grasp than Sounds so i wonder if it would make more sense to lead with Beats just to introduce them to the code aspect better?

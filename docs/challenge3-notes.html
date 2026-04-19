@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Challenge 3 | Notes</title>
+  </head>
+  <body>
+<pre>
+
+<h1>Notes</h1>
+<img src="piano.png" width="500"/>
+
+$: note("c d e f g a b c4").sound("piano")
+
+$: note("db eb gb ab bb").sound("piano") // flats
+
+$: note("c# d# f# g# a#").sound("piano") // sharps
+
+$: n("0 2 4 <[6,8] [7,9]>").scale("C:minor").sound("piano")
+
+$: n("<0 -3>, 2 4 <[6,8] [7,9]>")
+    .scale("<C:major D:mixolydian>/4")
+    .sound("piano").cpm(60)
+    
+List of Keys to Try
+    C:major
+    A2:minor
+    D:dorian
+    G:mixolydian
+    A2:minor:pentatonic
+    F:major:pentatonic
+
+</pre>
+  </body>
+</html>

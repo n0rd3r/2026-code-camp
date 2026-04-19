@@ -1,0 +1,173 @@
+Sound (ice) Breaker
+    Name
+    School
+    Grade
+    Do you play a musical instrument?
+    Favorite Musical Artist/Album
+    How do you listen to music?
+    
+Strudel Shortcuts
+
+    Play: Ctrl-ENTER
+    Stop: Ctrl-.
+    Undo: Ctrl-z
+
+    ~ = Rest
+
+SOUND LIST
+    insect
+    wind
+    jazz
+    metal
+    east
+    crow
+    casio
+    space
+    numbers
+    numbers:1
+    piano
+    gm_electric_guitar_muted
+    gm_acoustic_bass
+    gm_voice_oohs
+    gm_blown_bottle
+    gm_xylophone
+    sawtooth
+    square
+    triangle
+
+DRUM LIST
+    bd = bass drum
+    hh = high hat
+    oh = open hat
+    sd = snare drum
+    rd = ride
+    cr = crash
+    lt = low tom
+    mt = med tom
+    ht = high tom
+    cp = clap
+    sh = shaker
+    cb = cowbell
+    tb = tambourine
+
+BANK LIST
+    AkaiLinn
+    RhythmAce
+    RolandTR808
+    RolandTR707
+    ViscoSpaceDrum
+
+METHODS
+    .cpm(60) = cycles per minute (higher = faster)
+    .scale("D:minor")
+    .lpf(800) = low pass filter
+    .gain(1)  = volume
+    .delay(".5")
+    .vowel("a e i o u")
+    .room(1)  = echo in a room
+    .pan(1)   = pan to different ear 0 = left .5 = both 1 = right
+    .rev()    = reverse the whole pattern
+
+SIGNALS
+    sine
+    saw
+    square
+    tri
+    rand
+    perlin
+
+CHORD LIST
+    D:minor
+
+Special Characters
+    [] - play all notes in a single beat
+    <> - Each Cycle
+    ~  - rest
+    *  - speed up
+    /  - slow down
+    !  - replicate
+    @  - elongate
+    ,  - parallel
+    $  - play in parallel threads
+    _  - mute a line
+    SPACE - sequence
+
+Sounds
+    ADSR envelope: Combination of Attack, Decay, Sustain, and Release.
+
+    time (number|Pattern): attack time in seconds
+    time (number|Pattern): decay time in seconds
+    gain (number|Pattern): sustain level (0 to 1)
+    time (number|Pattern): release time in seconds
+
+    // attack 
+    note("c3 e3 f3 g3").attack("<0 .1 .5>")
+
+    // 
+Drums
+
+    // Four on the Floor
+    $: sound("[bd bd bd bd]").bank('RolandTR909')
+
+    // Tildes are RESTS ~
+    $: s("[~ sd ~ [~ sd]]").bank('RolandTR909')
+
+    // Multipliers can make things go faster
+    $: s("[hh hh hh hh]*2").bank('RolandTR909')
+
+    sound("bd hh sd [ht mt lt]")
+
+Musical Notes
+    C, D, E, F, G, A, B, C
+
+Patterns
+    note("c!2 [eb,<g a bb a>]").sound("piano").cpm(60)
+
+Musical Chords
+    note("[c, eb, g] [c, e, g]").sound("piano")
+
+    sound("piano").chord("<Am C D F Am E Am E>").voicing()
+
+    n("0 2 4 6").scale("A:minor").sound("piano")
+
+History of Computer Music
+
+Complex
+
+    note("<g1 bb1 d2 f1>")
+    .add(note("0,.1")) // <------ chorus
+    .s("sawtooth").scope()
+
+Samples
+    samples({
+    jeff: 'samples/check.wav',
+    word: 'samples/word.wav',
+    }, 'https://raw.githubusercontent.com/cah-jeffrey-norder/2025-cardinal-tech-camp/main/');
+
+    _$: note("c2 d2 [e2 c3 c] c1").s("jeff")
+    $: note("~ ~ ~ [c2 c2 c2]").s("<word jeff>").pan("<0 1>")
+    $: s("bd bd:3*3 bd bd, ~ sd ~ sd, hh*16").gain(.5)
+
+MIND BLOWN
+
+$: note("<d d d a a# d3 f4>*15".sub(12))
+  .gain(1).s("sawtooth").fanchor(0)
+  .lpf(mousex.range(0,1000)).lpenv(mousey.range(0,8))
+  .ftype('ladder')
+  .lpq(7).color('cyan')
+  // .drive(3)
+  .distort("1.5:.7")
+  ._scope()
+
+_$: s("bd*5").bank('RolandTR909')
+._punchcard({height:16,labels:1})
+_$_: s("hh*10").dec(.1).bank('RolandTR909').gain(sine.fast(4))
+._punchcard({height:16,labels:1})
+_$: gain("[0 1]*2.5").chord("<Dm9 Gm9>").voicing()
+  .delay(".6:.1:.8").room(1).dec(.1).s("sine").fm(2)
+  .lastOf(4, x=>x
+    .gain("[.3 1]*5")
+    .add(note(saw.mul(2)))
+    .struct("x*20")
+    .dec(.1).delay(0))
+._pitchwheel()
