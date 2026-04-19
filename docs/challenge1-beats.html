@@ -11,15 +11,19 @@
 <h1>Beats</h1>
 <img src="drums.jpg" width="500"/>
 
+  // Set the time
+  setcpm(120/4)
 
   // Four on the Floor
-  $: sound("[bd bd bd bd]").bank('RolandTR909')
+  $: sound("bd bd bd bd").bank('RolandTR909')
 
   // Tildes are RESTS ~
-  $: sound("[~ sd ~ [~ sd]]").bank('RolandTR909')
+  $: sound("~ sd ~ sd").bank('RolandTR909')
 
+  // Putting sounds in brackets groups them together
   // Multipliers (*) can make things go faster
-  $: sound("[hh hh hh hh]*2").bank('RolandTR909')
+  $: sound("[hh hh hh hh]*4").bank('ViscoSpaceDrum')
+  $: sound("hh hh hh hh*4").bank('ViscoSpaceDrum')
 
   $: sound("bd hh sd [ht mt lt]")
 
@@ -29,14 +33,15 @@ Special Characters                               DRUM LIST
     ~  - rest                                       oh = open hat
     *  - speed up                                   sd = snare drum
     /  - slow down                                  rd = ride
-    !  - replicate                                  cr = crash
-    @  - elongate                                   lt = low tom
-    ,  - parallel                                   mt = med tom
+                                                    cr = crash
+                                                    lt = low tom
+                                                    mt = med tom
+                                                    tb = tambourine
+Start of Line                                       cb = cowbell
     $  - play in parallel threads                   ht = high tom
     _  - mute a line                                cp = clap
-    SPACE - sequence                                sh = shaker
-                                                    cb = cowbell
-BANK LIST                                           tb = tambourine
+                                                    
+BANK LIST                                           
     AkaiLinn
     RhythmAce
     RolandTR808
