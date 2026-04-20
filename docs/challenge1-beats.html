@@ -25,7 +25,8 @@
   $: sound("[hh hh hh hh]*4").bank('ViscoSpaceDrum')
   $: sound("hh hh hh hh*4").bank('ViscoSpaceDrum')
 
-  $: sound("bd hh sd [ht mt lt]")
+  // Extend a Loop using <>
+  $: sound("<[bd bd bd bd*3] [hh hh] [cp cp cp cp] [hh]>").bank('RolandTR909')
 
 Special Characters                               DRUM LIST
     [] - play all notes in a single beat            bd = bass drum
@@ -48,5 +49,5 @@ BANK LIST
     RolandTR707
     ViscoSpaceDrum
 </pre>
-  </body>
+</body>
 </html>
