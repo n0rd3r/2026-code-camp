@@ -1,11 +1,9 @@
-setcpm(120/4)
+$: sound("bd [~ bd] bd ~").bank("RolandTR808").room(0.3)
+$: sound("~ sd ~ sd").bank("RolandTR808").room(0.5)
+$: sound("hh*8").gain(0.2).bank("RolandTR808").room(0.3)
 
-$: sound("bd bd bd bd*3").bank('RolandTR909')
-_: sound("[hh hh hh hh]*4").bank('ViscoSpaceDrum')
-$: sound(" ~ sd ~ [sd sd sd]").bank('RolandTR909')
-$: sound("cp ~ ~ cp*3").bank('RolandTR909')
+$: note("<[g2 ~ ~ ~ ~ ~ g2] [c3 ~ ~ ~ ~ ~ c3] [d3 ~ ~ ~ ~ ~ d3] [c3 ~ ~ ~ ~ ~ c3]>").sound("gm_acoustic_bass").attack(0).decay(0).release(.25).sustain(1)
 
-_: sound("[hh hh hh hh]*4").bank('ViscoSpaceDrum')
-$: sound("hh hh hh hh*4").bank('ViscoSpaceDrum')
+_: note("[g4 b4 d5]*2").s("gm_xylophone").gain(0.1)
 
-
+$: note("<[g4 ~ ~ g4] [[f#4 f#4] ~ [e4 e4] [e4 d4]] [~] [~]>").s("gm_voice_oohs").velocity(0.8).lpf(3000).room(0.5).gain(0.7)
