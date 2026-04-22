@@ -1,0 +1,45 @@
+img {
+  max-width: 100%; /* Ensures the image never exceeds the width of its container */
+  height: auto;    /* Automatically adjusts the height to maintain the aspect ratio */
+  display: block;  /* Helps prevent unnecessary white space below the image */
+}
+
+* {
+  font-family: iawriter !important;
+  font-size: 13px;
+}
+
+li, h1, h2 {
+    font-size: larger;
+}
+	
+@font-face {
+  font-family: 'iawriter';
+  src: url('font/ia-writer-mono-latin-400-normal.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Italic */
+@font-face {
+  font-family: 'iawriter';
+  src: url('font/ia-writer-mono-latin-400-italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'iawriter';
+  src: url('font/ia-writer-mono-latin-700-normal.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Bold Italic */
+@font-face {
+  font-family: 'iawriter';
+  src: url('font/ia-writer-mono-latin-700-italic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
