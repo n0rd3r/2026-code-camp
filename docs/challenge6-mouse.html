@@ -1,14 +1,18 @@
 <html>
   <head>
-    <title>Challenge 6 | Cursor Movements</title>
+    <title>Challenge 6 | Mouse Movements</title>
   </head>
   <body>
 <pre>
 
-<h1>Cursor</h1>
-
-mousey
-mousex
+<h1>Mouse Movements</h1>
+<pre>
+$: note("<d d d a a# d3 f4>*15".sub(12))
+  .s("sawtooth")
+  .lpf(mousex.range(0,1000))
+  .lpenv(mousey.range(0,8))
+  .color('cyan')
+  ._scope()
 </pre>
   </body>
 </html>
