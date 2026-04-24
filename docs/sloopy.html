@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Sloopy</title>
+  </head>
+  <body>
+<pre>
+<h1>Hang on Sloopy</h1>
+
+$: sound("bd [~ bd] bd ~").bank("RolandTR808").room(0.3)
+$: sound("~ sd ~ sd").bank("RolandTR808").room(0.5)
+$: sound("hh*8").gain(0.2).bank("RolandTR808").room(0.3)
+
+$: note("&lt;[g2 ~ ~ ~ ~ ~ g2] [c3 ~ ~ ~ ~ ~ c3] [d3 ~ ~ ~ ~ ~ d3] [c3 ~ ~ ~ ~ ~ c3]&gt;").sound("gm_acoustic_bass").attack(0).decay(0).release(.25).sustain(1)
+
+_: note("[g4 b4 d5]*2").s("gm_xylophone").gain(0.1)
+
+$: note("&lt;[g4 ~ ~ g4] [[f#4 f#4] ~ [e4 e4] [e4 d4]] [~] [~]&gt;").s("gm_voice_oohs").velocity(0.8).lpf(3000).room(0.5).gain(0.7)
+</pre>
+  </body>
+</html>
