@@ -1,0 +1,19 @@
+// Welcome to Cardinal Tech Camp 2026
+// Daniyah
+setcpm(120/4)
+$: sound("[bd bd] [hh hh hh hh~] [cp cp]").room(2) // echo
+$: sound("[oh oh] [rd]").bank('AkaiLinn').color("red green")
+$: sound("[sd]!!")
+$: sound("[sd sd sd] [cp]").bank('AkaiLinn').color("purple red")
+//$: sound("  [cr] [tb] [rd rd] [cr, rd, cr]!!~").bank('ViscoSpaceDrum')
+$: sound("[cp]")
+$: note("c3 e3 g3 b3").sound("metal").attack(3).decay(2).sustain(.5).release(1).scope()
+$: note("c4 a3 g1 b3").sound("crow").attack(2).decay(2).sustain(.5).release(2).scope()
+$: note("c3 d1 g1 b3").sound("gm_electric_guitar_muted").attack(0).decay(1).sustain(.5).release(8).scope()
+$:sound("[lt lt]")
+.vowel("<a e i o>")
+$: note("c1 g2 d3 a4").sound("triangle").attack(2).decay(3).sustain(.5).release(8).scope().color("pink green")._scope()
+//$: note ("d c a2 g c").sound("piano")
+$: note("c1 g2 d3 a4").sound("gm_voice_oohs").attack(3).decay(3).sustain(.5).release(4).scope()
+//$: sound("piano").chord("<Am C D Am E>")
+$: sound("[cp cp cp]").color("blue red")

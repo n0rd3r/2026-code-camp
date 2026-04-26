@@ -1,0 +1,14 @@
+// Saumya
+160/10
+$:sound ("bd bd bd bd").bank('RolandTR909')
+$:sound ("~ sd ~ sd") .bank ('ViscoSpaceDrum')
+$:sound ("bd oh") .bank ('RolandTR909')
+$:sound (" sd bd hh sd")  .bank ('Akalinn') 
+//$: note("c d b f g").sound("piano")
+$: note("c3 e3 g3 b3").sound("sine").attack(0) .decay(1).sustain(.5).release(1).scope()
+//$: note("d c e f a") .chord("piano")
+$: note("~~~ ~~~~~~~ ~~~~~~~~~ ~~~~~~~~ a b c d e f g~~~~~~~~ a b c d e ~~~~~~~~~~~ a b c d e f"/5) .sound("piano")
+$:note ("<[c3] [d3] [e3] [f3] [c4] [d5] [d4] [d3]>").sound("piano").gain (0.9)
+$:note (" [c3,eb3,g3] [f3,a3,c4]").sound ("gm_electric_guitar_muted")
+$:sound (" oh oh bd") .bank ('RolandTR909') .gain (0.1)
+ .spiral().color("[pink] [purple]")

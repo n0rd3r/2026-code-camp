@@ -1,0 +1,14 @@
+ // Welcome to Cardinal Tech Camp 2026
+
+// Dushika
+setcpm(80/4)
+$: sound("{tb tb tb tb}"). bank("RolandTR909").color(" light blue")
+$: sound("{bd bd bd bd}*4"). bank("ViscoSpaceDrum").color(" light blue")
+$: sound("{tb tb}*4"). bank("ViscoSpaceDrum").color(" light blue")
+$: note("[c e g c e g f e d g g a b g a b c e g c br]/6").sound("Piano").attack(0).decay(1).sustain(.5).release(1).scope().color(" light blue")
+$: note("c3 c3 c3 e3 e3 e3 g3 g3 g3 br").sound("triangle sine triangle").attack(0).decay(1).sustain(.5).release(1).scope().color(" light blue")
+.room(2) // echo
+.delay(".5")
+._pianoroll({labels: 1 })
+
+

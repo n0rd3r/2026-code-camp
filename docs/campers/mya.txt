@@ -1,0 +1,14 @@
+// Hello, and thank you for listening! :)
+// Mya
+setcpm(65/4)
+$: sound("~ bd ~ bd").color("blue")
+$: sound("[bd ~ bd] ").color("blue")
+$: sound("bd ~ ~ bd ~ bd *4").color("blue") 
+$: sound(" mt ~ ~ ~ ").color("blue") 
+$: sound(" [ mt ~ ~ ~] /2").color("blue") 
+$: sound(" [bd cp bd cp ]*2 ").color("orange")   
+$: note("c5 e5 g5 b5").sound("piano"). attack(3).decay(3).sustain(.75).release(10).scope(9). color("orange")
+$: note("c6 e6 g6 b6").sound("gm_xylophone"). attack(7). sustain(.25). release(8). scope(9).color("blue")
+$: note("c2 e2 g2 b2").sound("piano").attack(7).sustain(.25).release (8).scope(9).color("orange")
+$: note("d e d c b a [d d]*1 e ").sound("gm_acoustic_bass").room(2) //echo 
+$: note("<0-3>, 6 7 <[8 7] [6 7] *4>").scale("G:minor"). sound("metal").punchcard().color("orange")// global

@@ -1,0 +1,9 @@
+// Aagna
+setcpm(160/4)
+$: sound("~ cb cp cr").bank('RolandTR808').color("pink")
+$: sound("bd hh oh cb bd oh").bank('AkaiLinn').color("pink")
+$: sound("oh ~ bd ~ oh ~ rd ~").bank('ViscoSpaceDrum').room(2).color("pink")
+
+$: sound("piano").chord("<C D E F G A B C>").voicing().room(5).color("pink")
+$: note("<[c3] [d3] [e3] [f3] [g3] [e3] [b3] [c4]>").sound("piano").gain(.9)
+.spiral().color("[cyan] [pink]")

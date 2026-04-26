@@ -1,0 +1,12 @@
+
+// sophia
+setcpm(160/4)
+$: sound("piano").chord("<Am Am C C D D Am Am>").voicing().lpf(800).room(2).color("red cyan") // echo // low pass filter (parameter)
+$: sound("bd bd bd bd").bank('RolandTR909').color("pink cyan")
+$: sound("cp ~ cp ~ ").bank('RolandTR909').color("purple blue")
+$: note("c3 c3 c3 c3").sound("gm_acoustic_bass").attack(0).decay(1).sustain(.5).release(1).scope().room(2).color("yellow green")
+$: note("c4 b4 ~ ~").sound("jazz").attack(3).decay(2).sustain(2.5).release(1).scope().color("red orange")
+$: note("d3 ~ d3 ~").sound("gm_xylophone").attack(0).decay(1).sustain(.5).release(1).scope().color("cyan magenta")
+$: note("<[A A]/4! [G G]/4! [A A]!>").sound("gm_voice_oohs").attack(0).decay(1).sustain(2).release(1).scope().room(2).gain(.5).color("purple blue")
+.pianoroll({ labels: 1})
+$: note("<[A A G B G G F# A]![~ ~ A A]!>").sound("gm_voice_oohs").room(2).color("pink purple")

@@ -1,0 +1,15 @@
+// Welcome to Cardinal Tech Camp 2026
+// Shravya
+setcpm(110/4)
+$: sound ("bd bd bd bd").color("magenta").bank('RolandTR909')
+$: sound ("~ sd ~ sd").color("magenta").bank('RolandTR909')
+$: sound ("cr cr cr cr").color("magenta").bank('ViscoSpaceDrum')
+$: sound ("<[bd bd bd bd*3] [hh hh] [cp cp cp cp] [hh]>").color("magenta").bank('ViscoSpaceDrum')
+$: sound ("[hh hh hh hh]*4").color("magenta").bank('ViscoSpaceDrum')
+$: note ("c3 e3 g3 b3").color("cyan").sound("gm_xylophone").attack(0).decay(1).sustain(.5).release(1).scope(2)
+$: note ("c3 e3 g3 b3").color("cyan").sound("triangle").attack(0).decay(1).sustain(.5).release(1).scope(2)
+$: note ("c2 e2 g2 b2").color("cyan").sound("sine").attack(0).decay(1).sustain(.5).release(1).scope(2)
+$: note ("c d e f g a b c4").color("purple").sound("piano")
+$: note ("0 2 4 <[6,8] [7,9]>").color("purple").scale("A2:minor").sound("piano")
+$: note ("[c3,eb3,g3] [f3,a3,c4]").color("white").sound("piano")
+$: sound ("piano").chord("<Am C D F Am E Am E>").color("white").voicing()
